@@ -29,18 +29,7 @@ const SignUp = () => {
                 console.log(error);
             })
 
-            const handleSignUp = () => {
-                signInWithPopup(auth, providerGoogle)
-                .then(result =>{
-                    const user = result.user;
-                    console.log(user);
-                   Navigate('/')
-                    
-                })
-                .catch(error =>{
-                    console.log(error.message)
-                })
-            }
+           
     }
     return (
         <div className="hero min-h-screen  rounded-xl">
@@ -82,7 +71,7 @@ const SignUp = () => {
                             <div className="form-control mt-6">
                                 <input type="submit" className="btn border-white bg-white text-blue-600" value="SignUp" />
                             </div>
-                            <div> <button onClick={handleSignUp} className='btn btn-block mt-3 bg-white border-white text-blue-600'><FaGoogle />With Google</button></div>
+                            <div> <button className='btn btn-block mt-3 bg-white border-white text-blue-600'><FaGoogle />With Google</button></div>
                         </form>
                         <p className='my-4 text-center'>Have an account? <Link to='/login' className='text-blue-900 font-bold'>Login</Link></p>
                     </div>
