@@ -20,7 +20,7 @@ const Header = () => {
                         {navItem}
                     </ul>
                 </div>
-                <Link to='/' className="text-4xl text-white font-extrabold animate__animated animate__swing">Fro<span className='text-blue-500'>X</span>en Le<span className='text-blue-500'>G</span>o</Link>
+                <Link to='/' className="text-4xl text-slate-200 font-extrabold animate__animated animate__swing">Fro<span className='text-blue-500'>X</span>en Le<span className='text-blue-500'>G</span>o</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
