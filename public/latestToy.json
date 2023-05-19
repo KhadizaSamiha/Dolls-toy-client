@@ -1,0 +1,7 @@
+[
+    { "name": "Elsa Doll", "price": 19.99, "image": "https://i.ibb.co/tYvmz5S/download-2.jpg", "quantity": 10 },
+    { "name": "Anna Doll", "price": 17.99, "image": "https://i.ibb.co/my1Cp31/download-1.jpg", "quantity": 5 },
+    { "name": "Olaf Plush Toy", "price": 9.99, "image": "https://i.ibb.co/bdZQH4Y/download-3.jpg", "quantity": 8 },
+    { "name": "Frozen Playset", "price": 39.99, "image": "https://i.ibb.co/3fNgXFD/download-4.jpg", "quantity": 3 }
+  ]
+  

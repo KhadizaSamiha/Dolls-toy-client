@@ -1,15 +1,11 @@
 
-import { Link, Navigate} from 'react-router-dom'
-import { FaGoogle } from 'react-icons/fa';
+import { Link, useNavigate} from 'react-router-dom'
 
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
-import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
-import app from '../firebase/firebase.config';
 
 const SignUp = () => {
-    const auth = getAuth(app);
-    const providerGoogle = new GoogleAuthProvider();
+    const navigate = useNavigate();
     const { createUser } = useContext(AuthContext)
     const handleSignUp = event => {
         event.preventDefault();
@@ -19,11 +15,15 @@ const SignUp = () => {
         const password = form.password.value;
         console.log(name, email, password);
 
+      
+
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
                 form.reset()
+                navigate('/')
+                
             })
             .catch(error => {
                 console.log(error);
@@ -71,7 +71,6 @@ const SignUp = () => {
                             <div className="form-control mt-6">
                                 <input type="submit" className="btn border-white bg-white text-blue-600" value="SignUp" />
                             </div>
-                            <div> <button className='btn btn-block mt-3 bg-white border-white text-blue-600'><FaGoogle />With Google</button></div>
                         </form>
                         <p className='my-4 text-center'>Have an account? <Link to='/login' className='text-blue-900 font-bold'>Login</Link></p>
                     </div>
