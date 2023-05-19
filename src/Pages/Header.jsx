@@ -20,15 +20,15 @@ const Header = () => {
                         {navItem}
                     </ul>
                 </div>
-                <Link to='/' className="text-4xl text-slate-200 font-extrabold animate__animated animate__swing">Fro<span className='text-blue-500'>X</span>en Le<span className='text-blue-500'>G</span>o</Link>
+                <Link to='/' className="text-4xl text-slate-200 font-extrabold animate__animated animate__swing">Fro<span className='text-sky-500'>X</span>en Le<span className='text-sky-500'>G</span>o</Link>
             </div>
-            <div className="navbar-center hidden lg:flex text-blue-400">
+            <div className="navbar-center hidden lg:flex text-sky-400">
                 <ul className="menu menu-horizontal px-1">
                     {navItem}
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to='/login'><button className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500">Login</button></Link>
+                <Link to='/login'><button className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500 text-white">Login</button></Link>
             </div>
         </div>
     );

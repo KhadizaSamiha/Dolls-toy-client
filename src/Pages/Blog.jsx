@@ -8,7 +8,7 @@ const Blog = () => {
                     1.What is an access token and refresh token? How do they work and where should we store them on the client-side?
                 </div>
                 <div className="collapse-content">
-                    <p>which token are used in token-based authentication to allow an application to access an API called access token and  A refresh token is a special key that enables a client for an API or service to retrieve new access tokens without requiring the user to perform a complete login</p>
+                    <p>Wshich token are used in token-based authentication to allow an application to access an API called access token and  A refresh token is a special key that enables a client for an API or service to retrieve new access tokens without requiring the user to perform a complete login</p>
                 </div>
             </div>
             <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
