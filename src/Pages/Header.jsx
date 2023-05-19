@@ -30,6 +30,9 @@ const Header = () => {
                         {navItem}
                     </ul>
                 </div>
+                <div>
+                    <img className='h-16 w-16 rounded-full' src='https://i.ibb.co/nDD4KLX/17651368-snowflake1.jpg' alt="" />
+                </div>
                 <Link to='/' className="text-4xl text-slate-200 font-extrabold animate__animated animate__swing">Fro<span className='text-sky-500'>X</span>en Le<span className='text-sky-500'>G</span>o</Link>
             </div>
             <div className="navbar-center hidden lg:flex text-sky-400">
