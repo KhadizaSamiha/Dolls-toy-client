@@ -6,19 +6,21 @@ import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../firebase/firebase.config';
+import useTitle from '../hooks/useTitle';
 const Login = () => {
+    useTitle('login')
     const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
     const navigate = useNavigate();
 
     const handleGoogleSignIn = () => {
-       signInWithPopup(auth, provider)
-       .then(result =>{
-        const user = result.user;
-        console.log(user);
-        navigate('/')
-       })
-       .catch(error => console.log(error))
+        signInWithPopup(auth, provider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                navigate('/')
+            })
+            .catch(error => console.log(error))
     }
     const { signIn } = useContext(AuthContext)
     const handleLogin = event => {
@@ -27,7 +29,7 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
-
+        
         signIn(email, password)
             .then(result => {
                 const user = result.user;

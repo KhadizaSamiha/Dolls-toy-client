@@ -1,14 +1,24 @@
 import { Link } from 'react-router-dom'
 import 'animate.css';
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
 const Header = () => {
+        const { user , logOut} = useContext(AuthContext);
     const navItem = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/allToys'>All Toys</Link></li>
         <li><Link to='/myToys'>My Toys</Link></li>
         <li><Link to='/addAToy'>Add A Toy</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
-        
+
     </>
+
+    const handleLogOut = () => {
+        logOut()
+            .then(result => { })
+            .catch(error => console.log(error))
+
+    }
     return (
         <div className="navbar bg-base-100 h-28 mb-3">
             <div className="navbar-start">
@@ -27,9 +37,9 @@ const Header = () => {
                     {navItem}
                 </ul>
             </div>
-            <div className="navbar-end">
+            {user ? <button onClick={handleLogOut} className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500 text-white">LogOut</button> : <div className="navbar-end">
                 <Link to='/login'><button className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500 text-white">Login</button></Link>
-            </div>
+            </div>}
         </div>
     );
 };
