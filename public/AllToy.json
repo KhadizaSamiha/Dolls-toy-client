@@ -1,0 +1,151 @@
+[
+    {
+      "name": "Musical Anna Keyboard",
+      "seller": "Rhythmic Dons",
+      "subCategory": "Musical Toys",
+      "price": 24.99,
+      "quantity": 5,
+      "rating": 4.3,
+      "description": "This Frozen toys bring the beloved characters to life. Let your child's imagination soar as they embark on imaginative play, reenacting Elsa's ice powers or Anna's courageous quests. These toys are perfect for fans of all ages, offering endless hours of magical fun.",
+      "image": "https://i.ibb.co/hYqRFwk/download-12.jpg"
+    },
+    {
+      "name": "Elsa Doll",
+      "seller": "Toy World",
+      "subCategory": "Dolls",
+      "price": 29.99,
+      "quantity": 10,
+      "rating": 3.5,
+      "description": "This Frozen toys bring the beloved characters to life. Let your child's imagination soar as they embark on imaginative play, reenacting Elsa's ice powers or Anna's courageous quests. These toys are perfect for fans of all ages, offering endless hours of magical fun.",
+      "image": "https://i.ibb.co/tYvmz5S/download-2.jpg"
+    },
+    {
+      "name": "Singing Olaf Plush Toy",
+      "seller": "Jingle Jams",
+      "subCategory": "Musical Toys",
+      "price": 14.99,
+      "quantity": 2,
+      "rating": 4.2,
+      "description" :"Enter the wintery world of Frozen with these delightful toys. From musical snow globes to interactive playsets, these toys transport children into the enchanting universe of Elsa, Anna, and Olaf. Whether they're reenacting iconic moments from the movie or creating their own Frozen-inspired stories, these toys provide hours of entertainment and make great collectibles for fans.",
+      "image": "https://i.ibb.co/JkXtGKF/download-11.jpg"
+    },
+    {
+      "name": "Anna Doll",
+      "seller": "Playtime Emporium",
+      "subCategory": "Dolls",
+      "price": 24.99,
+      "quantity": 5,
+      "rating": 2.5,
+      "description": "Experience the magic of Disney's beloved film with these enchanting Frozen toys. Join Elsa, Anna, and their friends on exciting adventures through the icy kingdom of Arendelle. These toys capture the charm and beauty of the movie's characters, allowing children to recreate their favorite scenes or create new stories of their own.",
+      "image": "https://i.ibb.co/my1Cp31/download-1.jpg"
+    },
+    {
+      "name": "Kristoff Doll",
+      "seller": "Adventure Toys",
+      "subCategory": "Dolls",
+      "price": 19.99,
+      "quantity": 8,
+      "rating": 4.5,
+      "description": "Bring the magic of Frozen home with these captivating toys. With options ranging from classic dolls to puzzles and board games, these toys offer a variety of engaging activities for Frozen fans. Encourage creativity, problem-solving, and social interaction as children explore the wintry landscapes and beloved characters of the Frozen franchise. These toys are sure to captivate young hearts and provide memorable playtime experiences.",
+      "image": "https://i.ibb.co/CWKP6jx/download-5.jpg"
+    },
+    {
+      "name": "Olaf Plush Toy",
+      "seller": "Cuddly Corner",
+      "subCategory": "Plush Toys",
+      "price": 9.99,
+      "quantity": 20,
+      "rating": 3.5,
+      "description" :"Enter the wintery world of Frozen with these delightful toys. From musical snow globes to interactive playsets, these toys transport children into the enchanting universe of Elsa, Anna, and Olaf. Whether they're reenacting iconic moments from the movie or creating their own Frozen-inspired stories, these toys provide hours of entertainment and make great collectibles for fans.",
+      "image": "https://i.ibb.co/bdZQH4Y/download-3.jpg"
+    },
+    {
+      "name": "Sven Stuffed Animal",
+      "seller": "Snuggle Zone",
+      "subCategory": "Plush Toys",
+      "price": 12.99,
+      "quantity": 15,
+      "rating": 4.6,
+      "description" :"Enter a world of icy wonder with captivating Frozen toys featuring authentic character designs and exquisite details. Inspire imaginative play and storytelling as children recreate Elsa's ice powers or join Anna on daring quests.",
+      "image": "https://i.ibb.co/1ngshhy/download-6.jpg"
+    },
+    {
+      "name": "Frozen Castle Playset",
+      "seller": "Adventure Toys",
+      "subCategory": "Playsets",
+      "price": 49.99,
+      "quantity": 3,
+      "rating": 4.5,
+      "description": "Experience the magic of Disney's Frozen with singing dolls, interactive figures, and puzzles. Let your child's imagination soar as they embark on unforgettable adventures in the kingdom of Arendelle.",
+      "image": "https://i.ibb.co/3fNgXFD/download-4.jpg"
+    },
+    {
+      "name": "Ice Palace Playset",
+      "seller": "Dreamland Toys",
+      "subCategory": "Playsets",
+      "price": 39.99,
+      "quantity": 5,
+      "rating": 4.5,
+      "description": "Experience the magic of Disney's Frozen with singing dolls, interactive figures, and puzzles. Let your child's imagination soar as they embark on unforgettable adventures in the kingdom of Arendelle.",
+      "image": "https://i.ibb.co/WtwKgFr/download-7.jpg"
+    },
+    {
+      "name": "Enchanted Forest Playset",
+      "seller": "Adventure Awaits",
+      "subCategory": "Playsets",
+      "price": 34.99,
+      "quantity": 7,
+      "rating": 4.5,
+      "description": "Experience the magic of Disney's Frozen with singing dolls, interactive figures, and puzzles. Let your child's imagination soar as they embark on unforgettable adventures in the kingdom of Arendelle.",
+      "image": "https://i.ibb.co/PFzq47p/download-8.jpg"
+    },
+    {
+      "name": "Mountain Expedition Playset",
+      "seller": "Toys Unlimited",
+      "subCategory": "Playsets",
+      "price": 29.99,
+      "quantity": 4,
+      "description": "This Frozen toys bring the beloved characters to life. Let your child's imagination soar as they embark on imaginative play, reenacting Elsa's ice powers or Anna's courageous quests. These toys are perfect for fans of all ages, offering endless hours of magical fun.",
+      "image": "https://i.ibb.co/QjVHsPF/download-9.jpg"
+    },
+    {
+      "name": "Musical Elsa Doll",
+      "seller": "Melody Music",
+      "subCategory": "Musical Toys",
+      "price": 19.99,
+      "quantity": 3,
+      "rating": 4.2,
+      "description": "Experience the magic of Disney's Frozen with singing dolls, interactive figures, and puzzles. Let your child's imagination soar as they embark on unforgettable adventures in the kingdom of Arendelle.",
+      "image": "https://i.ibb.co/cbspdQq/download-10.jpg"
+    },
+    {
+      "name": "Singing Olaf Plush Toy",
+      "seller": "Jingle Jams",
+      "subCategory": "Musical Toys",
+      "price": 14.99,
+      "quantity": 2,
+      "rating": 4.3,
+      "description": "This Frozen toys bring the beloved characters to life. Let your child's imagination soar as they embark on imaginative play, reenacting Elsa's ice powers or Anna's courageous quests. These toys are perfect for fans of all ages, offering endless hours of magical fun.",
+      "image": "https://i.ibb.co/JkXtGKF/download-11.jpg"
+    },
+    {
+      "name": "Frozen Storybook",
+      "seller": "Bookworm Emporium",
+      "subCategory": "Books",
+      "price": 8.99,
+      "quantity": 12,
+      "rating": 2.5,
+      "description": "Experience the magic of Disney's Frozen with singing dolls, interactive figures, and puzzles. Let your child's imagination soar as they embark on unforgettable adventures in the kingdom of Arendelle.",
+      "image": "https://i.ibb.co/cQHDmnL/download-13.jpg"
+    },
+    {
+      "name": "Adventures of Elsa and Anna",
+      "seller": "Tale Tales",
+      "subCategory": "Books",
+      "price": 6.99,
+      "quantity": 10,
+      "rating": 3.5,
+      "description" :"Enter a world of icy wonder with captivating Frozen toys featuring authentic character designs and exquisite details. Inspire imaginative play and storytelling as children recreate Elsa's ice powers or join Anna on daring quests.",
+      "image" : "https://i.ibb.co/v3kZD6M/images.jpg"
+    }
+]

@@ -3,7 +3,7 @@ import 'animate.css';
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 const Header = () => {
-        const { user , logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     const navItem = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/allToys'>All Toys</Link></li>
@@ -31,16 +31,22 @@ const Header = () => {
                     </ul>
                 </div>
                 <div>
-                    <img className='h-16 w-16 rounded-full' src='https://i.ibb.co/nDD4KLX/17651368-snowflake1.jpg' alt="" />
+                    <img className='lg:h-16 lg:w-16  rounded-full' src='https://i.ibb.co/nDD4KLX/17651368-snowflake1.jpg' alt="" />
                 </div>
                 <Link to='/' className="text-4xl text-slate-200 font-extrabold animate__animated animate__swing">Fro<span className='text-sky-500'>X</span>en Le<span className='text-sky-500'>G</span>o</Link>
             </div>
             <div className="navbar-center hidden lg:flex text-sky-400">
-                <ul className="menu menu-horizontal px-1">
+                <ul className="menu menu-horizontal px-1 ml-20">
                     {navItem}
                 </ul>
             </div>
-            {user ? <button onClick={handleLogOut} className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500 text-white">LogOut</button> : <div className="navbar-end">
+            {user ? <div>
+                <div className="tooltip mr-10" data-tip={user.displayName}>
+                    <img className={`h-16 w-24 rounded-full mx-5 `} src={user.photoURL
+                    } alt="" />
+                </div>
+                <button onClick={handleLogOut} className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500 text-white">LogOut</button>
+            </div> : <div className="navbar-end">
                 <Link to='/login'><button className="btn border-0 bg-gradient-to-r from-cyan-500 to-blue-500 text-white">Login</button></Link>
             </div>}
         </div>
