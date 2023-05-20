@@ -29,7 +29,7 @@ const AllToys = () => {
                         </thead>
                         <tbody>
                            {
-                            allToys?.map(toys => <tr> 
+                            allToys?.map(toys => <tr key={toys?._id}> 
                                 <td className='w-16'><img className='h-16 w-16 rounded-full' src={toys?.image} alt="" /></td> 
                                 <td className='w-10  text-lg'>{toys?.name}</td> 
                                 <td className='w-10  text-lg'>{toys?.seller}</td> 
