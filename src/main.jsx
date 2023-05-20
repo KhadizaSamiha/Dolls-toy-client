@@ -14,6 +14,7 @@ import AuthProvider from './Provider/AuthProvider';
 import Blog from './Pages/Blog';
 import AllToys from './Pages/AllToys';
 import ToyDetails from './Pages/ToyDetails';
+import AddAToy from './Pages/AddAToy';
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         element: <ToyDetails></ToyDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/allToys/${params.id}`)
       },
+      {
+        path: 'addAToy',
+        element: <AddAToy></AddAToy>
+      }
     ]
   },
 ]);
