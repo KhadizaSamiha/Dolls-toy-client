@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
+import { useLoaderData } from 'react-router-dom';
 
 
 const UpdateToy = () => {
+    const data = useLoaderData();
+    console.log(data);
+
+
     const {user} =useContext(AuthContext);
     const handleUpdateToy = event => {
         event.preventDefault();
@@ -27,12 +32,12 @@ const UpdateToy = () => {
             quantity
         }
         console.log(UpdatedToy);
-        fetch(`http://localhost:5000/allToys/${_id}`, {
+        fetch(`https://dolls-toy-server.vercel.app/allToys/${data?._id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(Updated)
+            body: JSON.stringify(UpdatedToy)
         })
             .then(res => res.json())
             .then(data => {
@@ -76,7 +81,7 @@ const UpdateToy = () => {
                             <label className="label">
                                 <span className="label-text">Seller Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="selleremail" defaultValue={user.email}  className="input input-bordered" />
+                            <input type="email" name='email' placeholder="selleremail" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">

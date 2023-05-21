@@ -2,16 +2,18 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import useTitle from "../hooks/useTitle";
 
 
 
 
 const MyToys = () => {
+    useTitle('MyToys')
     const { user } = useContext(AuthContext);
     console.log(user);
     const [myToys, setMyToys] = useState([]);
     console.log(myToys);
-    const uri = `http://localhost:5000/myToys?email=${user.email}`
+    const uri = `https://dolls-toy-server.vercel.app/myToys?email=${user.email}`
     useEffect(() => {
         fetch(uri)
             .then(res => res.json())
@@ -21,7 +23,7 @@ const MyToys = () => {
     const handleDelete = id => {
         const proceed = confirm('are u sure?')
         if (proceed) {
-            fetch(`http://localhost:5000/myToys/${id}`, {
+            fetch(`https://dolls-toy-server.vercel.app/myToys/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import {
@@ -18,6 +18,8 @@ import AddAToy from './Pages/AddAToy';
 import MyToys from './Pages/MyToys';
 import PrivateRoute from './Pages/PrivateRoute';
 import UpdateToy from './Pages/UpdateToy';
+
+
 
 
 const router = createBrowserRouter([
@@ -48,8 +50,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'allToys/:id',
-        element: <ToyDetails></ToyDetails>,
-        loader: ({params}) => fetch(`http://localhost:5000/allToys/${params.id}`)
+        element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`https://dolls-toy-server.vercel.app/allToys/${params.id}`)
       },
       {
         path: 'addAToy',
@@ -62,7 +64,7 @@ const router = createBrowserRouter([
       {
         path: 'updateToy/:id',
         element: <UpdateToy></UpdateToy>,
-        loader : ({params}) => fetch(`http://localhost:5000/myToys/${params.id}`)
+        loader : ({params}) => fetch(`https://dolls-toy-server.vercel.app/allToys/${params.id}`)
       },
     ]
   },

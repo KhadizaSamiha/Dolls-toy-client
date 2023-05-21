@@ -8,7 +8,7 @@ const Banner = () => {
                 <div className='w-1/3'>
                     <h1 className="text-5xl font-bold text-slate-200">Welcome to Froxen Lego</h1>
                     <p className="py-6 text-sky-400 text-5xl">20% Discount on all toy in trends!.</p>
-                    <button className="btn btn-outline btn-info ">View More!</button>
+                    <button  className="btn btn-outline btn-info ">View More!</button>
                 </div>
             </div>
         </div>
