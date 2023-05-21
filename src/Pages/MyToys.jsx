@@ -15,9 +15,27 @@ const MyToys = () => {
             .then(res => res.json())
             .then(data => setMyToys(data))
     }, [user])
+
+    const handleDelete = id => {
+        const proceed = confirm('are u sure?')
+        if (proceed) {
+            fetch(`http://localhost:5000/myToys/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('deleted successfully');
+                        const remaining = myToys.filter(myToy => myToy._id != id);
+                        setMyToys(remaining)
+                    }
+                })
+                .catch(error => console.log(error))
+        }
+    }
     return (
         <div>
-            <h1>My Toyyyyyyy{myToys.length}</h1>
             <div className="overflow-x-auto">
                 <table className="table table-compact w-full">
                     <thead>
@@ -42,7 +60,7 @@ const MyToys = () => {
                                 <td className='w-10  text-lg'>{toys?.price}</td>
                                 <td className='w-10  text-lg'>{toys?.quantity}</td>
                                 <td className='w-10  text-lg'><button className="text-sky-500"><FaEdit /></button></td>
-                                <td className='w-10  text-lg'><button className="text-red-400"><FaTrash /></button></td>
+                                <td className='w-10  text-lg'><button onClick={() => handleDelete(toys._id)} className="text-red-400"><FaTrash /></button></td>
                             </tr>)
                         }
                     </tbody>
