@@ -1,0 +1,5 @@
+[
+    { "name": "Musical Keyboard", "price": 19.99, "image": "https://i.ibb.co/hYqRFwk/download-12.jpg", "quantity": 10 },
+    { "name": "Anna Doll", "price": 17.99, "image": "https://i.ibb.co/my1Cp31/download-1.jpg", "quantity": 5 },
+    { "name": "Ice Playset", "price": 9.99, "image": "https://i.ibb.co/WtwKgFr/download-7.jpg", "quantity": 8 }
+  ]

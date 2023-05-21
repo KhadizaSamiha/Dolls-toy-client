@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { FaEdit, FaTrash } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+
 
 
 
@@ -59,7 +61,7 @@ const MyToys = () => {
                                 <td className='w-10  text-lg'>{toys?.subCategory}</td>
                                 <td className='w-10  text-lg'>{toys?.price}</td>
                                 <td className='w-10  text-lg'>{toys?.quantity}</td>
-                                <td className='w-10  text-lg'><button className="text-sky-500"><FaEdit /></button></td>
+                                <td className='w-10  text-lg'><Link to={`/updateToy/${toys._id}`}><button className="text-sky-500"><FaEdit /></button></Link></td>
                                 <td className='w-10  text-lg'><button onClick={() => handleDelete(toys._id)} className="text-red-400"><FaTrash /></button></td>
                             </tr>)
                         }

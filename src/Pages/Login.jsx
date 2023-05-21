@@ -35,6 +35,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 navigate('/');
+                alert('login success')
             })
             .catch(error => console.log(error))
 

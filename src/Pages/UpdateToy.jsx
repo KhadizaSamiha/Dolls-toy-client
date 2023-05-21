@@ -1,10 +1,11 @@
-import { useContext } from "react";
-import { AuthContext } from "../Provider/AuthProvider";
-import Swal from 'sweetalert2'
+import React from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
 
-const AddAToy = () => {
-    const { user } = useContext(AuthContext);
-    const handleAddToy = event => {
+
+const UpdateToy = () => {
+    const {user} =useContext(AuthContext);
+    const handleUpdateToy = event => {
         event.preventDefault();
 
         const form = event.target;
@@ -14,52 +15,52 @@ const AddAToy = () => {
         const subCategory = form.subcategory.value;
         const price = form.price.value;
         const quantity = form.quantity.value;
-        const photoUrl = form.photoUrl.value;
+       
         // console.log(name, sellerName, email, subcategory, price, quantity, photoUrl);
 
-        const addToy = {
+        const UpdatedToy = {
             name,
             seller,
             email,
             subCategory,
             price,
-            quantity,
-            photoUrl
+            quantity
         }
-        console.log(addToy);
-        fetch('http://localhost:5000/allToys', {
-            method: "POST",
+        console.log(UpdatedToy);
+        fetch(`http://localhost:5000/allToys/${_id}`, {
+            method: "PUT",
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(addToy)
+            body: JSON.stringify(Updated)
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if (data.insertedId) {
-                    Swal.fire({
-                        position: 'center',
-                        icon: 'success',
-                        title: 'Toy has been added',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                }
+                // if (data.insertedId) {
+                //     Swal.fire({
+                //         position: 'center',
+                //         icon: 'success',
+                //         title: 'Toy has been added',
+                //         showConfirmButton: false,
+                //         timer: 1500
+                //     })
+                // }
                 form.reset()
             })
             .catch(error => console.log(error))
 
     }
+  
     return (
         <div className="hero min-h-[500px] text-white" style={{ backgroundImage: `url("https://i.ibb.co/k4kTQ9M/two-santa-claus-with-sled-snow.jpg")` }}>
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-neutral-content ">
-                <form onSubmit={handleAddToy}>
+                <form onSubmit={handleUpdateToy}>
                     <div className="flex justify-between space-x-10">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text">Name!!!!</span>
                             </label>
                             <input type="text" name='name' placeholder="name" className="input input-bordered" />
                         </div>
@@ -75,7 +76,7 @@ const AddAToy = () => {
                             <label className="label">
                                 <span className="label-text">Seller Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="selleremail" defaultValue={user.email} className="input input-bordered" />
+                            <input type="email" name='email' placeholder="selleremail" defaultValue={user.email}  className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -98,19 +99,11 @@ const AddAToy = () => {
                             <input type="number" name='quantity' placeholder="quantity" className="input input-bordered" />
                         </div>
                     </div>
-                    <div className=" justify-between space-x-10 block">
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">PhotoUrl</span>
-                            </label>
-                            <input type="text" name='photoUrl' placeholder="photoUrl" className="input input-bordered" />
-                        </div>
-                    </div>
-                    <button className="btn btn-block btn-outline mt-5">Add Toy</button>
+                    <button className="btn btn-block btn-outline mt-5">Update Toy</button>
                 </form>
             </div>
         </div>
     );
 };
 
-export default AddAToy;
+export default UpdateToy;

@@ -1,5 +1,6 @@
 import Banner from "./Banner";
 import SectionOne from "./SectionOne";
+import SectionTwo from "./SectionTwo";
 import TabSection from "./TabSection";
 
 
@@ -9,6 +10,7 @@ const Home = () => {
             <Banner></Banner>
             <TabSection ></TabSection>
             <SectionOne></SectionOne>
+            <SectionTwo></SectionTwo>
         </div>
     );
 };
