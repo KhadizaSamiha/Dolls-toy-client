@@ -1,5 +1,8 @@
+import { useContext } from "react";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const AddAToy = () => {
+    const {user} = useContext(AuthContext);
     const handleAddToy = event =>{
         event.preventDefault();
 
@@ -59,7 +62,7 @@ const AddAToy = () => {
                             <label className="label">
                                 <span className="label-text">Seller Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="selleremail" className="input input-bordered" />
+                            <input type="email" name='email' placeholder="selleremail" defaultValue={user.email} className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
